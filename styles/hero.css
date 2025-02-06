@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+
+.hero {
+    position: relative;
+    height: 75vh;  /* 减小高度 */
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    overflow: hidden;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+}
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slideshow {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 40px);  /* 为标题留出空间 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slideshow img {
+    position: absolute;
+    max-width: 90%;  /* 减小图片尺寸 */
+    max-height: 90%;  /* 减小图片尺寸 */
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    filter: brightness(0.9);  /* 添加艺术效果 */
+}
+
+.slideshow img.active {
+    opacity: 1;
+}
+
+.location-title {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-family: 'Montserrat', sans-serif;  /* 更改字体 */
+    font-weight: 300;  /* 使用更轻的字重 */
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 10px 24px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);  /* 添加模糊效果 */
+    border-radius: 6px;
+    letter-spacing: 1.5px;  /* 增加字间距 */
+    text-transform: uppercase;  /* 转换为大写 */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.location-title.active {
+    opacity: 1;
+}
+
+/* 艺术化的个人简介卡片 */
+.profile-card {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 1.5rem;  /* 减小内边距 */
+    margin-left: 8%;
+    border-radius: 15px;
+    width: 28vw;  /* 稍微减小宽度 */
+    min-width: 260px;  /* 减小最小宽度 */
+    max-width: 340px;  /* 减小最大宽度 */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transform: translateY(0);
+    transition: all 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.profile-image {
+    width: 11vw;  /* 减小头像尺寸 */
+    height: 11vw;
+    min-width: 90px;  /* 减小最小尺寸 */
+    min-height: 90px;
+    max-width: 130px;  /* 减小最大尺寸 */
+    max-height: 130px;
+    margin: 0 auto 1rem;  /* 减小下边距 */
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.profile-image img:hover {
+    transform: scale(1.05);
+}
+
+.profile-content h2 {
+    font-family: 'Montserrat', sans-serif;  /* 使用相同的字体 */
+    font-weight: 300;  /* 使用轻量字重 */
+    font-size: calc(1.2rem + 0.5vw);  /* 稍微调整字体大小 */
+    margin-bottom: 0.5rem;
+    background: linear-gradient(45deg, #333, #666);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1.5px;  /* 增加字间距 */
+    text-transform: uppercase;  /* 转换为大写 */
+}
+
+.profile-content .title {
+    font-size: calc(0.7rem + 0.2vw);  /* 响应式字体大小 */
+    line-height: 1.4;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+.contact-icon {
+    width: 20px;  /* 减小图标尺寸 */
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.contact-icon:hover {
+    transform: translateY(-2px) scale(1.1);
+}
+
+/* 微信二维码弹窗样式 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 15px;
+    width: 300px;
+    position: relative;
+    transform: scale(0.9);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.modal.show .modal-content {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #333;
+}
+
+/* 密码错误抖动动画 */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+.error-message.shake {
+    animation: shake 0.3s ease-in-out;
+    color: #ff4444;
+}
+
+/* 更新密码输入框样式 */
+.modal-content input {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 1rem 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.modal-content button {
+    width: 100%;
+    padding: 0.8rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.modal-content button:hover {
+    background: var(--accent-color);
+}
+
+.error-message {
+    color: #666;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 500px;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .profile-card {
+        width: 82vw;  /* 减小移动端宽度 */
+        margin: 1rem auto 0;  /* 减小顶部边距 */
+        padding: 1.2rem;  /* 减小内边距 */
+        background: rgba(0, 0, 0, 0.7);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .profile-image {
+        width: 16vw;  /* 减小移动端头像尺寸 */
+        height: 16vw;
+    }
+
+    .profile-content h2 {
+        background: linear-gradient(45deg, #fff, #ccc);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: calc(1rem + 0.5vw);  /* 移动端稍微调小字号 */
+    }
+
+    .profile-content .title {
+        color: rgba(255, 255, 255, 0.8);  /* 改为白色文字 */
+    }
+
+    .hero-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;  /* 确保在个人简介卡片下方 */
+    }
+
+    .slideshow img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;  /* 改为cover以填充整个区域 */
+    }
+
+    .location-title {
+        font-size: 0.9rem;
+        padding: 8px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-card {
+        width: 88vw;
+        margin-top: 0.8rem;  /* 进一步减小顶部边距 */
+    }
+
+    .profile-image {
+        width: 22vw;
+        height: 22vw;
+    }
+} 

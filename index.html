@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stanley portfolio</title>
+    <link rel="stylesheet" href="styles/globals.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/hero.css">
+    <link rel="stylesheet" href="styles/media.css">
+
+    <link rel="stylesheet" href="styles/social.css">
+    <link rel="stylesheet" href="styles/brands.css">
+    <link rel="stylesheet" href="styles/footer.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-links">
+                <a href="#media">影视媒体</a>
+                <a href="#social">自媒体运营</a>
+                <a href="#brands">合作品牌</a>
+                <a href="#" class="contact-link" id="contact-link">合作入口</a>
+            </div>
+            <button class="language-toggle" onclick="toggleLanguage()">EN</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 首页大图和个人简介 -->
+        <section class="hero">
+            <div class="profile-card fade-in">
+                <div class="profile-image">
+                    <img src="images/stanley.jpg" alt="Stanley">
+                </div>
+                <div class="profile-content">
+                    <h2>Stanley Huang</h2>
+                    <p class="title">摄影师·视频创作者·自媒体人·0.6的I人</p>
+                    <div class="contact-icons">
+                        <a href="#" class="contact-icon" id="wechat-icon">
+                            <img src="images/icons/wechat.svg" alt="WeChat">
+                        </a>
+                        <a href="mailto:worthyhuang@gmail.com" class="contact-icon">
+                            <img src="images/icons/email.svg" alt="Email">
+                        </a>
+                        <a href="tel:9099797647" class="contact-icon">
+                            <img src="images/icons/phone.svg" alt="Phone">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="slideshow-container">
+                    <div class="slideshow">
+                        <img src="images/works/photo1.jpg" alt="Katmai National Park" class="active">
+                        <img src="images/works/photo2.jpg" alt="Mount Rainier">
+                        <img src="images/works/photo3.jpg" alt="Baja California">
+                        <img src="images/works/photo4.jpg" alt="Brooks Falls">
+                        <img src="images/works/photo5.jpg" alt="Hawaii Volcanoes">
+                        <img src="images/works/photo6.jpg" alt="Chena Hot Spring">
+                        <img src="images/works/photo7.jpg" alt="Chinitna Bay">
+                        <img src="images/works/photo8.jpg" alt="Mount Agung">
+                    </div>
+                    <div class="location-title active">Katmai NP, Alaska</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 影视媒体 -->
+        <section id="media" class="media">
+            <h2 class="section-title fade-in">影视媒体</h2>
+            <div class="media-container">
+                <div class="media-row fade-in">
+                    <div class="media-item">
+                        <img src="images/works/ys1.jpg" alt="影视作品1">
+                    </div>
+                    <div class="media-item">
+                        <img src="images/works/ys2.jpg" alt="影视作品2">
+                    </div>
+                    <div class="media-item">
+                        <img src="images/works/ys3.jpg" alt="影视作品3">
+                    </div>
+                </div>
+                <div class="media-row fade-in">
+                    <div class="media-item">
+                        <img src="images/works/ys4.jpg" alt="影视作品4">
+                    </div>
+                    <div class="media-item">
+                        <img src="images/works/ys5.jpg" alt="影视作品5">
+                    </div>
+                    <div class="media-item">
+                        <img src="images/works/ys6.jpg" alt="影视作品6">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 自媒体运营 -->
+        <section id="social" class="social-stats">
+            <h2 class="section-title fade-in">自媒体运营</h2>
+            <div class="stats-container">
+                <div class="platform-card fade-in">
+                    <div class="platform-name chinese">抖音</div>
+                    <div class="stats">
+                        <div class="number">100W+</div>
+                        <div class="label">点击数</div>
+                    </div>
+                </div>
+
+                <div class="platform-card fade-in">
+                    <div class="platform-name chinese">小红书</div>
+                    <div class="stats">
+                        <div class="number">10W+</div>
+                        <div class="label">获赞</div>
+                    </div>
+                </div>
+
+                <div class="platform-card fade-in">
+                    <div class="platform-name english">Etsy</div>
+                    <div class="stats">
+                        <div class="number">$20W+</div>
+                        <div class="label">年销售额</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 合作品牌 -->
+        <section id="brands" class="brands">
+            <h2 class="fade-in">合作品牌</h2>
+            <div class="brand-grid">
+                <div class="brand-item fade-in">
+                    <img src="images/brands/0.png" alt="品牌1">
+                </div>
+                <div class="brand-item fade-in">
+                    <img src="images/brands/1.png" alt="品牌2">
+                </div>
+                <div class="brand-item fade-in">
+                    <img src="images/brands/2.png" alt="品牌3">
+                </div>
+                <div class="brand-item fade-in">
+                    <img src="images/brands/3.png" alt="品牌4">
+                </div>
+                <div class="brand-item fade-in">
+                    <img src="images/brands/4.png" alt="品牌5">
+                </div>
+                <div class="brand-item fade-in">
+                    <img src="images/brands/5.png" alt="品牌6">
+                </div>
+                <div class="brand-item fade-in">
+                    <img src="images/brands/6.png" alt="品牌7">
+                </div>
+                <div class="brand-item fade-in">
+                    <img src="images/brands/7.png" alt="品牌8">
+                </div>
+                <div class="brand-item fade-in">
+                    <img src="images/brands/8.png" alt="品牌9">
+                </div>
+            </div>
+
+        </section>
+
+        <!-- 合作入口 -->
+        <section id="contact" class="footer">
+            <div class="copyright fade-in">
+                © 2024 Stanley Huang. All rights reserved.
+            </div>
+        </section>
+    </main>
+
+    <!-- 微信二维码弹窗 -->
+    <div id="wechat-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="images/qrcode.jpg" alt="WeChat QR Code">
+        </div>
+    </div>
+
+    <!-- 密码输入弹窗 -->
+    <div id="password-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>请输入访问密码</h3>
+            <input type="password" id="password-input" placeholder="请输入密码">
+            <button id="submit-password">确认</button>
+            <p class="error-message"></p>
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html> 

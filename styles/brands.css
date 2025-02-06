@@ -1,0 +1,64 @@
+.brands {
+    padding: var(--section-padding);
+    background-color: white;
+    text-align: center;
+}
+
+.brand-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 600px;
+    margin: 2rem auto 0;
+    padding: 0 2rem;
+}
+
+.brand-item {
+    padding: 0.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1.5;
+}
+
+.brand-item:hover {
+    transform: translateY(-5px);
+}
+
+.brand-item img {
+    max-width: 70%;
+    max-height: 70%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+    .brand-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .brand-item {
+        padding: 0.4rem;
+    }
+    
+    .brand-item img {
+        max-width: 75%;
+        max-height: 75%;
+    }
+}
+
+@media (max-width: 480px) {
+    .brand-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .brand-item {
+        padding: 0.8rem;
+    }
+} 

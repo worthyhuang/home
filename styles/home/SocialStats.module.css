@@ -1,0 +1,13 @@
+.socialStats {
+  background-color: white;
+  text-align: center;
+}
+
+.chartContainer {
+  max-width: 800px;
+  margin: 2rem auto 0;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+} 

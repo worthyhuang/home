@@ -1,0 +1,49 @@
+.videoWorks {
+  background-color: white;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.videoCard {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail {
+  position: relative;
+  aspect-ratio: 16/9;
+}
+
+.playButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.playButton:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.videoCard h3 {
+  padding: 1rem;
+  text-align: center;
+} 

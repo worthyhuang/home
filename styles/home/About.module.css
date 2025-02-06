@@ -1,0 +1,46 @@
+.about {
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.imageContainer {
+  flex: 0 0 300px;
+}
+
+.profileImage {
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+  flex: 1;
+}
+
+.content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.content p {
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .imageContainer {
+    flex: 0 0 auto;
+  }
+} 
