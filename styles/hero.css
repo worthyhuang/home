@@ -78,13 +78,13 @@
 .profile-card {
     position: relative;
     z-index: 2;
-    background: rgba(255, 255, 255, 0.85);
-    padding: 1.5rem;  /* 减小内边距 */
+    background: rgba(255, 255, 255, 0.7);  /* 降低不透明度从0.85到0.7 */
+    padding: 1.5rem;
     margin-left: 8%;
     border-radius: 15px;
-    width: 28vw;  /* 稍微减小宽度 */
-    min-width: 260px;  /* 减小最小宽度 */
-    max-width: 340px;  /* 减小最大宽度 */
+    width: 28vw;
+    min-width: 260px;
+    max-width: 340px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -95,7 +95,7 @@
 .profile-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.75);  /* 悬停时也保持较高透明度 */
 }
 
 .profile-image {
@@ -266,10 +266,11 @@
     }
 
     .profile-card {
-        width: 82vw;  /* 减小移动端宽度 */
-        margin: 1rem auto 0;  /* 减小顶部边距 */
-        padding: 1.2rem;  /* 减小内边距 */
-        background: rgba(0, 0, 0, 0.7);
+        width: 82vw;
+        margin: 1rem auto 0;
+        padding: 1.2rem;
+        background: rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(2px);  /* 降低模糊程度到2px */
         border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
@@ -301,7 +302,8 @@
     .slideshow img {
         width: 100%;
         height: 100%;
-        object-fit: cover;  /* 改为cover以填充整个区域 */
+        object-fit: cover;
+        filter: brightness(0.95);  /* 略微调亮图片 */
     }
 
     .location-title {

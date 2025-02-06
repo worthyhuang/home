@@ -37,7 +37,7 @@ function toggleLanguage() {
             xiaohongshu: 'RedNote',
             clicks: 'Views',
             likes: 'Likes',
-            sales: 'Annual Sales',
+            sales: 'Annual GMV',
             passwordTitle: 'Enter Password',
             passwordPlaceholder: 'Enter password',
             confirm: 'Confirm',
